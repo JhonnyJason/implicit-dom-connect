@@ -1,6 +1,6 @@
 {
     "name": "implicit-dom-connect",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "This is the shit!",
     "scripts": {
         "build-coffee": "coffee -o output/ -c sources/source/*/*.coffee",
@@ -22,6 +22,8 @@
         "postinstall": "npm run initialize-thingy",
         "initialize-thingy": "run-s -ns build",
         "build": "run-s -ns clean-package build-coffee copyscript install-node-modules prepend-shebang",
+        "test": "run-s -ns build-coffee run-test",
+        "run-test": "cd testing && ./test.sh",
         "watch": "run-p -nsr watch-coffee",
         "release": "run-s -ns build publish-script",
         "update-cli-packages": "toolset/thingy-build-system/cli/update-packages.sh",
@@ -40,7 +42,7 @@
     "bugs": {
         "url": "https://github.com/JhonnyJason/implicit-dom-connect/issues"
     },
-    "homepage": "https://github.com/JhonnyJason/implicit-dom-connect#readme",
+    "homepage": "https://github.com/JhonnyJason/implicit-dom-connect-output#readme",
     "dependencies": {
         "coffeescript": "^2.5.1",
         "npm-check-updates": "^4.0.3",
