@@ -7,7 +7,6 @@ window.onload = ->
     promises = (m.initialize() for n,m of Modules)
     await Promise.all(promises)
     appStartup()
-    superAwesomeId    
     anotherShit
     return
 
