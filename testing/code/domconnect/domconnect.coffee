@@ -2,6 +2,7 @@ domconnect = {name: "domconnect"}
 
 ############################################################
 domconnect.initialize = () ->
+    global.superAwesomeId = document.getElementById("super-awesome-id")
     global.footer = document.getElementById("footer")
     global.menu = document.getElementById("menu")
     global.imageIcon = document.getElementById("image-icon")
